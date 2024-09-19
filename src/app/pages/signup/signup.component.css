@@ -17,23 +17,32 @@ input{
   border-right: none;
   border-bottom: solid lightgray;
   border-radius: 0;
-  padding: 3%;
-  margin-bottom: 7%;
+  padding: 3% 3% 3% 0;
+  margin-bottom: 5%;
   font-size: large;
 
 }
-form{
-  margin-top: 10%;
 
-}
-form h2{
-  padding-bottom: 5%;
-}
+
 form h6{
-  padding-bottom: 3%;
+  padding-bottom: 2%;
 
 }
 .span{
 padding: 5% 0;
 font-size: large;
+}
+
+img{
+  width:60%;
+}
+.top-padding{
+  padding-top: 5%;
+}
+.letter-space{
+  letter-spacing: 3px;
+  font-size: 250%;
+  font-weight: bolder;
+
+
 }

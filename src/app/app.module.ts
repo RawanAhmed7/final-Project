@@ -11,7 +11,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { FoterterComponent } from './shared/foterter/foterter.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
@@ -24,7 +23,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     ContactComponent,
     AboutComponent,
     SignupComponent,
-    FoterterComponent,
+  
     FooterComponent
   ],
   imports: [
