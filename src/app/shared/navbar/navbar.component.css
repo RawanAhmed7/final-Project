@@ -1,0 +1,13 @@
+.search-icon
+{
+border: none;
+position: absolute;
+right: 2.5%;
+top: 40px;;
+background-color: rgb(238, 238, 238);
+}
+input
+{
+  position: relative;
+  background-color: rgb(238, 238, 238);
+}

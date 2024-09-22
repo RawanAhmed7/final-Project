@@ -1,0 +1,22 @@
+.huge{
+font-size: 100px;
+font-weight: bold;
+
+}
+.error-msg{
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  margin: 10% 15% ;
+}
+button{
+  background-color:#c9302c;
+  border: none;
+  padding: 15px 35px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 7%;
+
+
+}

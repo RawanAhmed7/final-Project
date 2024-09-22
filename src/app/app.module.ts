@@ -13,6 +13,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { AccountComponent } from './pages/account/account.component';
+import { ErrorComponent } from './pages/error/error.component';
 // import { AuthComponent } from './services/auth/auth.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AccountComponent } from './pages/account/account.component';
 
     FooterComponent,
       AccountComponent,
+      ErrorComponent,
       // AuthComponent
   ],
   imports: [
