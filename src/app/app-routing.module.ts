@@ -10,6 +10,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { AccountComponent } from './pages/account/account.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 const routes: Routes = [
   {path:"" , component: HomeComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:"footer" , component:FooterComponent},
   {path:"login-page" , component:LoginPageComponent},
   {path:"account" , component:AccountComponent},
+  {path:"error" , component:ErrorComponent},
 
 
 ];
