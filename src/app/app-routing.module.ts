@@ -8,6 +8,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { AccountComponent } from './pages/account/account.component';
 
 const routes: Routes = [
   {path:"" , component: HomeComponent},
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path:"about" , component:AboutComponent},
   {path:"signup" , component:SignupComponent},
   {path:"footer" , component:FooterComponent},
+  {path:"login-page" , component:LoginPageComponent},
+  {path:"account" , component:AccountComponent},
 
 
 ];

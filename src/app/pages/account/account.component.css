@@ -1,0 +1,78 @@
+*{
+  text-decoration: none;
+  padding: 0;
+  list-style: none;
+
+}
+.greeting{
+  font-weight: bolder;
+  margin-bottom: 7%;
+}
+
+
+
+.sidebar h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #000;
+  padding: 9%;
+
+}
+
+.sidebar ul li a:hover {
+  
+  color: #c9302c;
+}
+.red-text{
+  color: #c9302c;
+}
+
+
+
+.profile-section h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+
+  padding: 5%;
+
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
+
+.form-control {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  background-color: rgb(239, 237, 237);
+}
+
+.button{
+  background-color: #d9534f;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+
+  margin-left: 80%;
+  margin-top: 3%;
+
+}
+
+.button:hover {
+  background-color: #c9302c;
+}
+

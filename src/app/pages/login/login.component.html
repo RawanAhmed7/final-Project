@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <form  class="row gy-3" #registerForm="ngForm" (ngSubmit)="handleSubmit(registerForm)">
     <div class="col-12 col-md-6">
       <input type="text" class="form-control" [(ngModel)]="model.userName" #userName="ngModel"
@@ -21,7 +21,7 @@
         placeholder="password" name="userPassword" minlength="5" pattern="^[A-Za-z]+$" id="">
     </div>
     <div class="alert alert-danger" *ngIf="userPassword.dirty && (userPassword.invalid || registerForm.submitted)">
-      <!-- {{userPassword.errors| json}} -->
+      {{userPassword.errors| json}}
         <div *ngIf="userPassword.errors?.['minlength']">
                   should be more than 5
         </div>
@@ -33,4 +33,4 @@
       <button class="btn btn-primary" > register </button>
     </div>
   </form>
-</div>
+</div> -->
