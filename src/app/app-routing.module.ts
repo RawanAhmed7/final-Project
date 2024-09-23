@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component';
+// import { LoginComponent } from './pages/login/login.component';
 import { TopheaderComponent } from './shared/topheader/topheader.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -15,7 +15,7 @@ import { ErrorComponent } from './pages/error/error.component';
 const routes: Routes = [
   {path:"" , component: HomeComponent},
   {path:"home" , component:HomeComponent},
-  {path:"login" , component: LoginComponent},
+  // {path:"login" , component: LoginComponent},
   {path:"topheader" , component:TopheaderComponent},
   {path:"navbar" , component:NavbarComponent},
   {path:"contact" , component:ContactComponent},
