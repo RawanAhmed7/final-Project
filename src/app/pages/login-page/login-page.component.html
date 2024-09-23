@@ -2,7 +2,7 @@
   <div>
     <div class="d-flex justify-content-between">
       <img src="cart.png" class="col-6 " alt="">
-      <form class=" col-4 me-2" (ngSubmit)="handleSubmit()">
+      <form class=" col-4 me-2" [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
 
 
       <h2 class="mb-3  fw-bolder letter-space"> Log in to Exclusive</h2>
@@ -20,7 +20,7 @@
 
 
         <input type="password" class="form-control"  formControlName="password" placeholder="Password" name="">
-            <div class="alert alert-danger " ngIf="submitted && userData.password.invalid" >
+            <div class="alert alert-danger " *ngIf="submitted && userData.password.invalid" >
               <div  *ngIf="userData.password.errors?.['required']">
                 password is required
               </div>

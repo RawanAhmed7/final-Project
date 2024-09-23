@@ -19,12 +19,13 @@ export class LoginPageComponent {
   submitted=false
   handleSubmit(){
     this.submitted=true
-    // if(this.loginForm.valid){
-    //   this.auth.login(this.loginForm.value).subscribe(res=>{
-    //     if(res.status == 'Success'){
-    //       console.log('success')
-    //   })
-    // }
+    if(this.loginForm.valid){
+      this.auth.login(this.loginForm.value).subscribe(res=>{
+        if(res.status == 'Success'){
+          console.log('success')
+      }
+    })
+    }
 
   }
 }
