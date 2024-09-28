@@ -127,11 +127,11 @@
   <h3>Browse By Category</h3>
   <div class="text-center">
     <div class="row">
-      <div class="col-md-2 col-sm-4    item ">
+      <div class="col-md-2 col-sm-4    item " *ngFor="let item of category">
         <i class="fa-solid fa-mobile-screen"></i>
-        <p>Phones</p>
+        <p>{{item.category_data.category_name}}</p>
       </div>
-      <div class="col-md-2  col-sm-4  item ">
+      <!-- <div class="col-md-2  col-sm-4  item ">
         <i class="fa-solid fa-computer"></i>
         <p>Computers</p>
       </div>
@@ -176,7 +176,7 @@
       <div class="col-md-2   col-sm-4   item  ">
         <i class="fa-solid fa-gamepad"></i>
         <p>Gaming</p>
-      </div>
+      </div> -->
     </div>
   </div>
 

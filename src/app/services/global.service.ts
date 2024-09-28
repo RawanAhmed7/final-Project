@@ -21,7 +21,10 @@ export class GlobalService {
   }
 
 
+getCategory():Observable<any>{
+  return this.http.get("http://techs-experts.net/public/api/top-categories")
 
+}
 
 
 

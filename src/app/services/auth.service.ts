@@ -14,4 +14,8 @@ export class AuthService {
     return this.http.post(`${this.baseUrl}/client/customer_login` , obj )
   }
 
+  getUser():Observable<any>{
+    return this.http.get('')
+
+  }
 }

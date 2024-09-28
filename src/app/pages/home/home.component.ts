@@ -8,8 +8,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(private global : GlobalService){
 
+  category:any
+  constructor(private global : GlobalService ){
+    this.global.getCategory().subscribe(res=>{
+      console.log(res.data.slice(0,12))
+      this.category=res.data.slice(0,12)
+
+    })
   }
 
   ngOnINit(){
@@ -18,10 +24,13 @@ export class HomeComponent {
 
       })
     }
-  
+
 
 }
 function getIcon() {
   throw new Error('Function not implemented.');
+
+
+
 }
 
