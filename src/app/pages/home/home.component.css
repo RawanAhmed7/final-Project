@@ -1,6 +1,43 @@
 
 
 
+
+.sidebar {
+  width: 250px;
+}
+
+.list-group-item {
+  cursor: pointer;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- */
+
 .item{
   width: 13%;
   margin-left: 3%;

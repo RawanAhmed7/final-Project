@@ -11,3 +11,11 @@ input
   position: relative;
   background-color: rgb(238, 238, 238);
 }
+.nav-style{
+  color:#d9534f;
+  /* text-decoration: underline; */
+  font-size: 20px;
+  font-weight: 500;
+border-radius: 3px;
+  box-shadow: 5px 5px 5px 5px rgba(211, 211, 211, 0.184);
+}
