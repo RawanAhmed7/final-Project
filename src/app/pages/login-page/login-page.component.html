@@ -1,15 +1,18 @@
+<!-- Reactive Form  -->
 <div class="container min-vh-100 mt-5 top-padding">
   <div>
     <div class="d-flex justify-content-between">
       <img src="cart.png" class="col-6 " alt="">
-      <form class=" col-4 me-2" [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
-
+      <form class=" col-4 me-2" [formGroup]="loginForm" (ngSubmit)="handleSubmit() " >
+        <div class="alert alert-danger col-12 " *ngIf="errorMsg"  >
+          {{errorMsg}}
+      </div>
 
       <h2 class="mb-3  fw-bolder letter-space"> Log in to Exclusive</h2>
         <h6 class="mb-3">Enrter your details below</h6>
 
-        <input type="email" class="form-control"   formControlName="email" placeholder="Email" name="">
-          <div class="alert alert-danger" *ngIf="submitted && userData.email.invalid">
+        <input type="email" class="form-control"   formControlName="email" placeholder="Email" name="" (focus)="errorMsg=null">
+          <div class="alert alert-danger" *ngIf="submitted && userData.email.invalid" >
             <div *ngIf="userData.email.errors?.['required']">
               Email is required
             </div>
@@ -19,14 +22,14 @@
           </div>
 
 
-        <input type="password" class="form-control"  formControlName="password" placeholder="Password" name="">
+        <input type="password" class="form-control"  formControlName="password" placeholder="Password" name="" (focus)="errorMsg=null">
             <div class="alert alert-danger " *ngIf="submitted && userData.password.invalid" >
               <div  *ngIf="userData.password.errors?.['required']">
                 password is required
               </div>
-              <div  *ngIf="userData.password.errors?.['minlength']">
+              <!-- <div  *ngIf="userData.password.errors?.['minlength']">
                 password has to be more than 8 characters
-              </div>
+              </div> -->
             </div>
 
 

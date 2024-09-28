@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-account',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './account.component.css'
 })
 export class AccountComponent {
+  constructor(private auth:AuthService){
+
+  }
+  handleProfile(){
+    this.auth.profile().subscribe(res=>{
+      console.log(res)
+    })
+  }
 
 }

@@ -8,14 +8,21 @@ import { Observable } from 'rxjs';
 export class AuthService {
     baseUrl = "http://techs-experts.net/public/api"
 
+    isLogin=(localStorage.getItem('userToken')) ? true :false;
+    fullName = (localStorage.getItem('userName')) ? localStorage.getItem('userName') : null;
+
+
 
   constructor(private http: HttpClient) { }
   login(obj : any):Observable<any>{
     return this.http.post(`${this.baseUrl}/client/customer_login` , obj )
   }
+  profile():Observable<any>{
+    return this.http.get(`${this.baseUrl}client/profile`)
+  }  
 
-  getUser():Observable<any>{
-    return this.http.get('')
+  // getUser():Observable<any>{
+  //   return this.http.get('')
 
-  }
+  // }
 }

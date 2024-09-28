@@ -13,10 +13,17 @@
           <a class="nav-link"  routerLink="/contact" routerLinkActive="nav-style">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  routerLink="/about" routerLinkActive="nav-style">ِAbout</a>
+          <a class="nav-link"  routerLink="/account" routerLinkActive="nav-style">ِAccount</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/signup" routerLinkActive="nav-style" >Sign Up</a>
+          <a class="nav-link" routerLink="/signup" routerLinkActive="nav-style" *ngIf="!auth.isLogin" >Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/ " routerLinkActive="nav-style" *ngIf="auth.isLogin" (click)="handleLogOut()">LogOut</a>
+        </li>
+        <li>
+
+          <!-- <p>Welcome{{auth.fullName}}</p> -->
         </li>
 
       </ul>

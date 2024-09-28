@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  flag:boolean =true
+  constructor(public auth :AuthService){
 
+}
+handleLogOut(){
+  localStorage.removeItem('userToken')
+  localStorage.removeItem('userName')
+  this.auth.isLogin = false
+}
 }
