@@ -16,6 +16,8 @@ import { AccountComponent } from './pages/account/account.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 
 
 @NgModule({
@@ -32,14 +34,17 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
     FooterComponent,
       AccountComponent,
       ErrorComponent,
-      LoginPageComponent
+      LoginPageComponent,
+      CategoriesComponent,
+      ProductDetailsComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [
     provideHttpClient()

@@ -1,0 +1,27 @@
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.image-thumbnail img {
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.active-thumbnail {
+  border: 2px solid #007bff;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn-secondary, .btn-danger {
+  margin-right: 10px;
+}
+
+#sizeOptions button {
+  margin-right: 10px;
+}
