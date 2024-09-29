@@ -8,19 +8,26 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
-  products: any[]=[]
-  constructor(private activated:ActivatedRoute,global :GlobalService){
-    console.log(this.activated.snapshot.paramMap.get("data.id"))
+
+products:any
+  constructor( private activated :ActivatedRoute , public global: GlobalService ){
+
+    console.log(this.activated.snapshot.paramMap.get("productId"))
+
   }
 
 
-  // ngOnInit(){
-  //   this.getProducts("id").subscribe(res=>{
-  //     console.log(res)
-  //     this.products = res
-  //   }
-  //   )
-  // }
+  ngOnInit(){
+    let productID = this.activated.snapshot.paramMap.get("productId")
+    this.activated.paramMap.subscribe(params=>{
+      // console.log(params)
+      let productId = params.get('postId')
+      this.global.getProducts(productID).subscribe(res=>{
+      this.products = res.data
+      console.log(this.products)
+      })
+    })
+  }
 
 
 

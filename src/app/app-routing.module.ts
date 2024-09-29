@@ -27,10 +27,11 @@ const routes: Routes = [
   {path:"login-page" , component:LoginPageComponent},
   {path:"account" , component:AccountComponent},
   {path:"error" , component:ErrorComponent},
-  {path:'product', children:[
-    {path:'',component:CategoriesComponent},
-    {path:':id',component:ProductDetailsComponent},
+  {path:'', children:[
+    {path:'',component:HomeComponent},
+    // {path:':id',component:CategoriesComponent}
   ]},
+  {path:'product/:productId',component:CategoriesComponent},
   {path:'single-product',component:ProductDetailsComponent},
 
 
