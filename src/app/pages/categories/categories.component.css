@@ -27,10 +27,16 @@ align-items: center;
   .body{
     padding-top:0;
   }
+
   span{
-    background-color: #f1b2b2;
+    background-color: hsl(235, 41%, 62%);
     padding:3px 7px;
-    border-radius: 3px;
+    border-radius: 10px;
+    padding: 10px;
   }
 
+
+}
+button{
+  background-color: #d9534f;
 }

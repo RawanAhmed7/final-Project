@@ -8,8 +8,36 @@ import { GlobalService } from '../../services/global.service';
   styleUrl: './product-details.component.css'
 })
 export class ProductDetailsComponent {
+  details:any
+  img:any
+  constructor(private activated:ActivatedRoute ,public global:GlobalService){
+    console.log(this.activated.snapshot.paramMap.get("singleId"))
 
-  images: string[] = [
+  }
+  ngOnInit(){
+    let singleID = this.activated.snapshot.paramMap.get("singleId")
+    this.activated.paramMap.subscribe(params=>{
+      // console.log(params)
+      let productId = params.get('singleId')
+      this.global.getProductDetails(singleID).subscribe(res=>{
+      this.details = res.data
+      console.log(this.details)
+      console.log(this.details[0])
+      })
+    })
+
+  }
+
+
+
+
+
+
+
+
+
+
+  images: any= [
     'cart.png',
     'appstore.svg',
     'googleplay.svg'
@@ -47,26 +75,6 @@ export class ProductDetailsComponent {
 
 
 
-  // singleProduct:any
-  // products:any
-  // constructor(private  activated :ActivatedRoute ,private global: GlobalService){
-  //   console.log(this.activated.snapshot.paramMap.get("id"))
 
-  // }
-  // ngOnInit(){
-  //   // let id = this.activated.snapshot.paramMap.get("id")
-  //   this.activated.paramMap.subscribe(params=>{
-  //     let productId = params.get('id')
-  //     this.global.getProductDetails(productId).subscribe(res=>{
-  //       this.singleProduct = res
-
-
-  //   })
-  // })
-  // this.global.getProducts().subscribe(res=>{
-  //   this.products = res
-  //   })
-
-  //   }
 
 }
