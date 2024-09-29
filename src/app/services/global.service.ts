@@ -8,9 +8,6 @@ import { Observable } from 'rxjs';
 export class GlobalService {
 
   constructor( private http:HttpClient) { }
-  getProducts(productId:any) :Observable<any>{
-    return this.http.get(`http://techs-experts.net/public/api/products-by-category/${productId}`)
-  }
 
   getProductDetails(id:any):Observable<any>{
     return this.http.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -21,10 +18,13 @@ export class GlobalService {
   }
 
 
-getCategory():Observable<any>{
-  return this.http.get("http://techs-experts.net/public/api/top-categories")
+  getCategory():Observable<any>{
+    return this.http.get("http://techs-experts.net/public/api/top-categories")
 
-}
+  }
+  getProducts(productId:any) :Observable<any>{
+    return this.http.get(`http://techs-experts.net/public/api/products-by-category/${productId}/0/0`)
+  }
 
 
 

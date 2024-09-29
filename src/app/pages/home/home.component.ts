@@ -19,10 +19,12 @@ export class HomeComponent {
   }
 
   ngOnINit(){
-      this.global.getIcon().subscribe(res=>{
-        console.log(res)
 
-      })
+
+      // this.global.getIcon().subscribe(res=>{
+      //   console.log(res)
+
+      // })
     }
 
 
