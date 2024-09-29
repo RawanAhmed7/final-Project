@@ -22,7 +22,7 @@ products:any
     this.activated.paramMap.subscribe(params=>{
       // console.log(params)
       let productId = params.get('postId')
-      this.global.getProducts(productID).subscribe(res=>{
+      this.global.getProductDetails(productID).subscribe(res=>{
       this.products = res.data
       console.log(this.products)
       })
