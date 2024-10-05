@@ -10,19 +10,23 @@ import { GlobalService } from '../../services/global.service';
 export class ProductDetailsComponent {
   details:any
   img:any
+  dddd:any
   constructor(private activated:ActivatedRoute ,public global:GlobalService){
     console.log(this.activated.snapshot.paramMap.get("singleId"))
 
   }
   ngOnInit(){
-    let singleID = this.activated.snapshot.paramMap.get("singleId")
+    // let singleID = this.activated.snapshot.paramMap.get("singleId")
     this.activated.paramMap.subscribe(params=>{
       // console.log(params)
-      let productId = params.get('singleId')
-      this.global.getProductDetails(singleID).subscribe(res=>{
-      this.details = res.data
+      let ID = params.get('singleId')
+      this.global.getProductDetails(ID).subscribe(res=>{
+      this.details = res.data[0]
+
       console.log(this.details)
-      console.log(this.details[0])
+      console.log(this.details.name)
+
+
       })
     })
 

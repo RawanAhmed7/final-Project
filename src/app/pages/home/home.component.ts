@@ -12,7 +12,7 @@ export class HomeComponent {
   category:any
   constructor(private global : GlobalService ){
     this.global.getCategory().subscribe(res=>{
-      console.log(res.data.slice(0,12))
+      // console.log(res.data.slice(0,12))
       this.category=res.data.slice(0,12)
 
     })
