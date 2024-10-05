@@ -18,11 +18,11 @@ products:any
 
 
   ngOnInit(){
-    let productID = this.activated.snapshot.paramMap.get("productId")
+    // let productID = this.activated.snapshot.paramMap.get("productId")
     this.activated.paramMap.subscribe(params=>{
       // console.log(params)
-      let productId = params.get('postId')
-      this.global.getProductDetails(productID).subscribe(res=>{
+      let id = params.get('productId')
+      this.global.getProducts(id).subscribe(res=>{
       this.products = res.data
       console.log(this.products)
       })

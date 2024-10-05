@@ -19,10 +19,11 @@ export class AuthService {
   }
   profile():Observable<any>{
     return this.http.get(`${this.baseUrl}client/profile`)
-  }  
+  }
 
-  // getUser():Observable<any>{
-  //   return this.http.get('')
+// for the address page with token
+  getUserProfile():Observable<any>{
+    return this.http.get('')
 
-  // }
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { mapToCanDeactivate, RouterModule, Routes } from '@angular/router';
 // import { LoginComponent } from './pages/login/login.component';
 import { TopheaderComponent } from './shared/topheader/topheader.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -13,6 +13,8 @@ import { AccountComponent } from './pages/account/account.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { canActivateGuard } from './guards/can-activate/can-activate.guard';
+import { canDeactivateGuard } from './guards/can-activate/can-deactivate.guard';
 
 const routes: Routes = [
   {path:"" , component: HomeComponent},
@@ -24,8 +26,8 @@ const routes: Routes = [
   {path:"about" , component:AboutComponent},
   {path:"signup" , component:SignupComponent},
   {path:"footer" , component:FooterComponent},
-  {path:"login-page" , component:LoginPageComponent},
-  {path:"account" , component:AccountComponent},
+  {path:"login-page" , component:LoginPageComponent,canDeactivate:[canDeactivateGuard]},
+  {path:"account" , component:AccountComponent,canActivate:[canActivateGuard]},
   {path:"error" , component:ErrorComponent},
   {path:'', children:[
     {path:'',component:HomeComponent},
@@ -33,6 +35,7 @@ const routes: Routes = [
   ]},
   {path:'product/:productId',component:CategoriesComponent},
   {path:'singleProduct/:singleId',component:ProductDetailsComponent},
+  { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
 
 
   {path:"**" , component:ErrorComponent}
@@ -42,6 +45,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes,{
     scrollPositionRestoration:'top'
   })],
-  exports: [RouterModule]
+  exports:[RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule{ }

@@ -19,6 +19,7 @@ import { HttpClient, provideHttpClient, withInterceptors } from '@angular/common
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { loginInterceptor } from './interceptors/login.interceptor';
+import { SharedModuleModule } from './shared-module/shared-module.module';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { loginInterceptor } from './interceptors/login.interceptor';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModuleModule
 
   ],
   providers: [
