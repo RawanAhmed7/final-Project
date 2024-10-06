@@ -1,0 +1,47 @@
+*{
+  text-decoration: none;
+  color:black;
+
+}
+.container {
+  margin-top: 20px;
+}
+
+.profile-sidebar {
+  padding: 20px ;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+.profile-userpic img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.profile-name {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.profile-usermenu {
+  margin-top: 30px;
+  margin-right: 20px;
+
+}
+
+.profile-usermenu ul li a {
+  padding: 10px;
+  font-size: 14px;
+  display: block;
+
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+  border-radius: 30px;
+  cursor: pointer;
+}

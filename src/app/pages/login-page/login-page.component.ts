@@ -28,7 +28,7 @@ export class LoginPageComponent {
         if(res.status == 'Success'){
           // console.log('success')
           this.router.navigateByUrl("/")
-          localStorage.setItem("userToken",res.data.token)
+          localStorage.setItem("token",res.data.token)
           this.auth.isLogin=true
         }
       },(error)=>{

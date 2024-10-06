@@ -15,6 +15,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { canActivateGuard } from './guards/can-activate/can-activate.guard';
 import { canDeactivateGuard } from './guards/can-activate/can-deactivate.guard';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   {path:"" , component: HomeComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:"login-page" , component:LoginPageComponent,canDeactivate:[canDeactivateGuard]},
   {path:"account" , component:AccountComponent,canActivate:[canActivateGuard]},
   {path:"error" , component:ErrorComponent},
+  {path:"cart" , component:CartComponent},
   {path:'', children:[
     {path:'',component:HomeComponent},
     // {path:':id',component:CategoriesComponent}

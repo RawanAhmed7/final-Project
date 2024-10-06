@@ -1,9 +1,9 @@
 export interface SignUp {
-  firstName:string
-  lastName:string
+  first_name:string
+  last_name:string
+  phone:string
   email:string
-  phoneNumber:string
   password:string
-  confirmPass:string
+  confirm_password:string
 
 }

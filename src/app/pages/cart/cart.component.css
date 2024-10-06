@@ -1,0 +1,65 @@
+.cart-container {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+}
+
+.cart-items {
+  border-bottom: 1px solid #ddd;
+}
+
+.coupon-section {
+  margin: 20px 0;
+}
+
+.coupon-section input {
+  padding: 10px;
+  width: 60%;
+}
+
+.coupon-section button {
+  padding: 10px 20px;
+  background-color:rgb(101, 41, 41);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-total {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-total p {
+  margin: 5px 0;
+}
+
+.cart-total button {
+  padding: 10px 20px;
+  background-color:rgb(101, 41, 41);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.button{
+  border: solid lightgray 3px ;
+  padding: 7px 20px;
+}
+.button:hover{
+  background-color: rgb(101, 41, 41);
+  color:white;
+  border-color: rgb(101, 41, 41);
+
+}

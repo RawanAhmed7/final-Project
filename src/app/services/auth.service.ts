@@ -23,7 +23,12 @@ export class AuthService {
 
 // for the address page with token
   getUserProfile():Observable<any>{
-    return this.http.get('')
+    return this.http.get('http://techs-experts.net/public/api/client/profile')
 
   }
+  register(obj : any):Observable<any>{
+    return this.http.post(`${this.baseUrl}/client/customer_register` , obj )
+  }
+
+
 }
