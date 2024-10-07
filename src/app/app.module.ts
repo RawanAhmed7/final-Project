@@ -20,6 +20,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { loginInterceptor } from './interceptors/login.interceptor';
 import { SharedModuleModule } from './shared-module/shared-module.module';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
       ErrorComponent,
       LoginPageComponent,
       CategoriesComponent,
-      ProductDetailsComponent
+      ProductDetailsComponent,
+      CartComponent
 
   ],
   imports: [

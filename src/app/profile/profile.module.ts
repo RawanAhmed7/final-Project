@@ -7,6 +7,7 @@ import { AddressesComponent } from './addresses/addresses.component';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     ProfileRoutingModule,
     FormsModule,
     SharedModuleModule,
+    NgSelectComponent
   ]
 })
 export class ProfileModule { }

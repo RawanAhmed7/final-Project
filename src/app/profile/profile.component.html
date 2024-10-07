@@ -1,11 +1,53 @@
 <div class="container">
   <div class="row">
-    <div class="col-3">
-      <ul class="list-unstyled">
-        <li routerLink="/profile/addresses">addresses</li>
-        <li routerLink="/profile/add-address">edit address</li>
-      </ul>
+    <div class="col-md-2  ">
+      <div class="profile-sidebar">
+        <div class="profile-userpic">
+          <img src="" class="img-responsive" alt="">
+        </div>
+
+          <div class="profile-name">
+            Rawan Ahmed
+          </div>
+
+        <div class="profile-usermenu ">
+          <ul class="nav">
+            <li class="d-block" routerLink="/profile/addresses"><a>My Profile</a></li>
+
+            <li><a>Change Password</a></li>
+            <li routerLink="/profile/add-address"><a >Addresses</a></li>
+            <li><a>Activity History</a></li>
+            <li><a>My Coupons</a></li>
+            <li><a>My Points</a></li>
+            <li><a>My Wallet</a></li>
+            <li><a>Your Communities</a></li>
+            <li><a>Refund Requests</a></li>
+            <li><a>My Complaints</a></li>
+            <li><a class="text-warning">Logout</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- changing part  -->
     <div class="col-8">
       <router-outlet></router-outlet>
     </div>

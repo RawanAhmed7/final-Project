@@ -1,4 +1,4 @@
- <!-- tamplete driven -->
+<!-- tamplete driven -->
 <div class="container min-vh-100 mt-5 top-padding">
   <div>
     <div class="d-flex justify-content-between">
@@ -6,8 +6,8 @@
       <form class=" col-4 me-2" #signupForm="ngForm" (ngSubmit)="handleSubmit(signupForm)">
         <h2 class="mb-3  fw-bolder letter-space">Create an Account</h2>
         <h6 class="mb-3">Enrter your details below</h6>
-        <input type="text" class="form-control" placeholder="First Name" [(ngModel)]="user.firstName"   name="firstName" #firstName="ngModel">
-        <input type="text" class="form-control" placeholder="Last Name"  [(ngModel)]="user.lastName" name="lastName" #LastName="ngModel">
+        <input type="text" class="form-control" placeholder="First Name" [(ngModel)]="user.first_name"   name="firstName" #first_name="ngModel">
+        <input type="text" class="form-control" placeholder="Last Name"  [(ngModel)]="user.last_name" name="lastName" #Last_name="ngModel">
 
 
       <input type="email" class="form-control" placeholder="Email"  [(ngModel)]="user.email" name="email" #email="ngModel" required email>
@@ -19,7 +19,7 @@
             invalid Email
         </div>
     </div>
-      <input type="text" class="form-control" placeholder="Phone number"  [(ngModel)]="user.phoneNumber" name="phoneNumber" #phoneNumber="ngModel">
+      <input type="text" class="form-control" placeholder="Phone number"  [(ngModel)]="user.phone" name="phoneNumber" #phone="ngModel">
         <input type="password" class="form-control" placeholder="Password"  [(ngModel)]="user.password" name="password"
             #password="ngModel" required minlength="8">
         <div class="alert alert-danger" *ngIf="password.invalid && (password.dirty  || signupForm.submitted )">
@@ -32,9 +32,9 @@
 
       </div>
 
-        <input type="password" class="form-control" placeholder="Re-Enter your password"  [(ngModel)]="user.confirmPass" name="confirmPass" #confirmPass="ngModel"
-        required (input)="checkPasswords(password.value, confirmPass.value)" >
-        <div class="alert alert-danger" *ngIf="!passwordsMatch && confirmPass.dirty">
+        <input type="password" class="form-control" placeholder="Re-Enter your password"  [(ngModel)]="user.confirm_password" name="confirmPass" #confirm_password="ngModel"
+        required (input)="checkPasswords(password.value, confirm_password.value)" >
+        <div class="alert alert-danger" *ngIf="!passwordsMatch && confirm_password.dirty">
           The passwords you entered do not match. Please try again.
         </div>
 
