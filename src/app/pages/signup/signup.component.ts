@@ -41,6 +41,8 @@ export class SignupComponent {
         localStorage.setItem('token',res.data.token)
         this.global.isLogin=true
         this.router.navigateByUrl("/")
+        localStorage.setItem('token',res.data.first_name)
+        this.auth.userName=this.user.first_name
 
 
       })

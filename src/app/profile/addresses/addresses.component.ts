@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { GlobalService } from '../../services/global.service';
 
 @Component({
   selector: 'app-addresses',
@@ -18,11 +19,13 @@ export class AddressesComponent {
     }
   )
 onSubmit(){}
+countries:any
+
 
 
 
 // get profile
-constructor(private auth:AuthService){
+constructor(private auth:AuthService,private global:GlobalService){
   this.auth.getUserProfile().subscribe(res=>{
 
     console.log(res)
@@ -31,6 +34,34 @@ constructor(private auth:AuthService){
 this.testForm.patchValue(userData)
   })
 
+  this.global.getCountries().subscribe(res=>{
+    console.log(res)
+    this.countries = res.data
+
+  })
+
 }
+stateSelect= true
+governorates:any
+cities:any
+
+handleGovernate(eve : any){
+  console.log(eve)
+  console.log(this.testForm.controls.country_id.value)
+  this.stateSelect = false
+  this.global.getGovernorate(eve.id).subscribe(res=>{
+    this.governorates = res.data
+  })
+}
+handleCities(eve:any){
+  console.log(eve)
+  console.log(this.testForm.controls.country_id.value)
+  this.stateSelect = false
+  this.global.getGovernorate(eve.id).subscribe(res=>{
+    this.governorates = res.data
+  })
+
+}
+
 
 }

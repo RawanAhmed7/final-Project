@@ -5,6 +5,7 @@ import { AddressesComponent } from './addresses/addresses.component';
 import { AddAddressComponent } from './add-address/add-address.component';
 
 const routes: Routes = [{ path: '', component: ProfileComponent , children:[
+  {path:'',component:AddressesComponent},
   {path:'addresses',component:AddressesComponent},
   {path:'add-address',component:AddAddressComponent},
 ]}];

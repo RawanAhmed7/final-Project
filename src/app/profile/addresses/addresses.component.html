@@ -1,40 +1,48 @@
-<!-- <form [formGroup]="form">
-  <input type="text" placeholder="name" formControlName="customer_first_name" >
-</form> -->
+<form [formGroup]="testForm" >
 
-<form [formGroup]="testForm" (ngSubmit)="onSubmit()">
-  <!-- Street input -->
-  <div class="form-group">
-    <label >Street</label>
-    <input type="text"  class="form-control" >
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default"> Name</span>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" formControlName="customer_first_name">
   </div>
+  <ng-select [items]="countries"
+  class="mt-3"
+  bindLabel="name"
+  bindValue="id"
+  formControlName="country_id"
+  placeholder="country"
+  (change)="handleGovernate($event)">
+</ng-select>
+  <ng-select [items]="governorates"
+  class="gy-3 mt-3 mb-3"
+  bindLabel="name"
+  bindValue="id"
+  formControlName="country_id"
+  placeholder="country"
+  (change)="handleCities($event)"
+  [readonly]="stateSelect">
+</ng-select>
 
-  <!-- Country Dropdown -->
-  <div class="form-group">
-    <label >Country</label>
-    <ng-select
-      [items]=""
-      bindLabel="name"
-      bindValue="code"
-      placeholder="Select country"
-      >
-    </ng-select>
-  </div>
 
-  <!-- Region Dropdown -->
-  <div class="form-group">
-    <label for="region">Region</label>
-    <ng-select
-      [items]=""
-      bindLabel="name"
-      bindValue="code"
-      placeholder="Select region"
-     >
-    </ng-select>
-  </div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Address Name</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Building Number</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Floor Number</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">11354</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Upload Image </span>
+  <input type="file" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
 
-  <!-- Other fields... -->
 
-  <button type="submit" class="btn btn-primary">Save Address</button>
 </form>
-

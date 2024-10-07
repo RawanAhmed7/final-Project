@@ -24,8 +24,16 @@ export class GlobalService {
   }
   isLogin= localStorage.getItem('token')? true :false
   userName:any;
+  getCountries():Observable<any>{
+    return this.http.get(`${this.baseUrl}countries`)
+  }
+  getGovernorate(id:any):Observable<any>{
+    return this.http.get(`${this.baseUrl}governorates/${id}`)
+  }
+  getCities(id:any):Observable<any>{
+    return this.http.get(`${this.baseUrl}cities/${id}`)
+  }
 
-  
 
 
 

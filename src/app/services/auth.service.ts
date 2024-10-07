@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class AuthService {
     baseUrl = "http://techs-experts.net/public/api"
 
-    isLogin=(localStorage.getItem('userToken')) ? true :false;
-    fullName = (localStorage.getItem('userName')) ? localStorage.getItem('userName') : null;
+    // isLogin=(localStorage.getItem('userToken')) ? true :false;
+    // fullName = (localStorage.getItem('userName')) ? localStorage.getItem('userName') : null;
 
 
 
@@ -29,6 +29,9 @@ export class AuthService {
   register(obj : any):Observable<any>{
     return this.http.post(`${this.baseUrl}/client/customer_register` , obj )
   }
+  isLogin= localStorage.getItem('token')? true :false
+  userName:any;
+
 
 
 }
