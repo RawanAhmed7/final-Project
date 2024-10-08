@@ -21,7 +21,7 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/ " routerLinkActive="nav-style" *ngIf="auth.isLogin" (click)="handleLogOut()">LogOut</a>
         </li>
-        <li *ngIf="global.userName">
+        <li *ngIf="global.userName" class="nav-item">
 
           <p>Welcome {{global.userName}}</p>
         </li>
