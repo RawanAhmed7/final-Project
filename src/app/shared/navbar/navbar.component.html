@@ -22,8 +22,11 @@
           <a class="nav-link" routerLink="/ " routerLinkActive="nav-style" *ngIf="auth.isLogin" (click)="handleLogOut()">LogOut</a>
         </li>
         <li *ngIf="auth.isLogin"class="nav-item">
+          <div class="d-flex">
 
-          <p class="pt-2">Welcome {{global.userName}}</p>
+            <p class="pt-2 ms-4">Welcome</p>
+            <p class="pt-2 text-red ms-2">  {{this.global.userName}}</p>
+          </div>
         </li>
 
       </ul>

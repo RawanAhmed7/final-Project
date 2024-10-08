@@ -16,9 +16,9 @@ export class NavbarComponent {
 
 handleLogOut(){
   localStorage.removeItem('userToken')
-  localStorage.removeItem('userName')
+  // localStorage.removeItem('userName')
   this.auth.isLogin = false
-  this.router.navigateByUrl("/")
+  this.router.navigateByUrl("/signup")
 
 }
 }

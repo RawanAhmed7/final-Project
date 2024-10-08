@@ -25,6 +25,12 @@ export class GlobalService {
   isLogin= localStorage.getItem('UserToken')? true :false
   userName:any;
 
+  get():Observable<any>{
+    return this.http.get(`${this.baseUrl}top-categories`)
+
+  }
+
+
 
 
 

@@ -50,7 +50,9 @@ border-radius: 3px;
 .dropdown-menu li a:hover {
   background-color: #911e1e;
 }
-
+.text-red{
+  color: #911e1e;
+}
 
 .dropdown:hover .dropdown-menu {
   display: block;
