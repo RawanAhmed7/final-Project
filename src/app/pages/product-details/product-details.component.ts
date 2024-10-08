@@ -31,7 +31,7 @@ export class ProductDetailsComponent {
     })
 
   }
-  mainImage: string = 'assets/img-main.jpg';
+  mainImage: string = '';
 
 
   quantity: number = 1;
@@ -77,15 +77,15 @@ export class ProductDetailsComponent {
     this.selectedImage = index;
   }
 
-  selectColor(color: string) {
-    this.selectedColor = color;
-    console.log(`Selected color: ${color}`);
-  }
+  // selectColor(color: string) {
+  //   this.selectedColor = color;
+  //   console.log(`Selected color: ${color}`);
+  // }
 
-  selectSize(size: string) {
-    this.selectedSize = size;
-    console.log(`Selected size: ${size}`);
-  }
+  // selectSize(size: string) {
+  //   this.selectedSize = size;
+  //   console.log(`Selected size: ${size}`);
+  // }
 
   products = [
     {
