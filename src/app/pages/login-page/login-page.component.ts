@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Route, Router } from '@angular/router';
+import { GlobalService } from '../../services/global.service';
 
 @Component({
   selector: 'app-login-page',
@@ -15,7 +16,7 @@ export class LoginPageComponent {
   })
 
 
-  constructor(private auth :AuthService ,private router:Router ){}
+  constructor(private auth :AuthService ,private router:Router ,private global:GlobalService){}
   get userData(){return this.loginForm.controls}
   get userPassword(){return this.loginForm.controls.password}
   errorMsg = null
@@ -29,7 +30,8 @@ export class LoginPageComponent {
           // console.log('success')
           this.router.navigateByUrl("/")
           localStorage.setItem("token",res.data.token)
-          this.auth.isLogin=true
+          this.auth.isLogin=true;
+          this.global.userName = res.data.first_name
         }
       },(error)=>{
         this.errorMsg = error.error.message

@@ -7,6 +7,7 @@ import { AddAddressComponent } from './add-address/add-address.component';
 const routes: Routes = [{ path: '', component: ProfileComponent , children:[
   {path:'addresses',component:AddressesComponent},
   {path:'add-address',component:AddAddressComponent},
+  {path:'edit-address/:id',component:AddressesComponent},
 ]}];
 
 @NgModule({
