@@ -22,10 +22,10 @@ export class GlobalService {
   getProductDetails(singleId:any):Observable<any>{
     return this.http.get(`${this.baseUrl}single-product/${singleId}`)
   }
-  isLogin= localStorage.getItem('token')? true :false
+  isLogin= localStorage.getItem('UserToken')? true :false
   userName:any;
 
-  
+
 
 
 

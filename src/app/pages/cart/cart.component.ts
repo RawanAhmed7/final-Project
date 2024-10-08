@@ -8,9 +8,19 @@ import { Component } from '@angular/core';
 export class CartComponent {
   subtotal = 1250;
   shipping = 50;
+  quantity: number = 1;
+
 
   gettotal() {
     return this.subtotal + this.shipping;
   }
 
+  decreaseQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
+  }
+  increaseQuantity() {
+    this.quantity++;
+  }
 }

@@ -9,8 +9,8 @@ import { GlobalService } from '../../services/global.service';
 })
 export class ProductDetailsComponent {
   details:any
-  img:any
-  dddd:any
+  // img:any
+  // dddd:any
   constructor(private activated:ActivatedRoute ,public global:GlobalService){
     console.log(this.activated.snapshot.paramMap.get("singleId"))
 
@@ -30,22 +30,21 @@ export class ProductDetailsComponent {
       })
     })
 
-  }mainImage: string = 'assets/img-main.jpg'; // Replace with your default main image
+  }
+  mainImage: string = 'assets/img-main.jpg';
 
-  // Quantity for product
+
   quantity: number = 1;
 
-  // Function to change the main image when a thumbnail is clicked
+
   changeMainImage(imageUrl: string) {
     this.mainImage = imageUrl;
   }
 
-  // Increase quantity
   increaseQuantity() {
     this.quantity++;
   }
 
-  // Decrease quantity
   decreaseQuantity() {
     if (this.quantity > 1) {
       this.quantity--;

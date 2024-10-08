@@ -16,7 +16,10 @@ export class LoginPageComponent {
   })
 
 
-  constructor(private auth :AuthService ,private router:Router ,private global:GlobalService){}
+  constructor(private auth :AuthService ,private router:Router ,private global:GlobalService){
+
+
+  }
   get userData(){return this.loginForm.controls}
   get userPassword(){return this.loginForm.controls.password}
   errorMsg = null
@@ -29,9 +32,13 @@ export class LoginPageComponent {
         if(res.status == 'Success'){
           // console.log('success')
           this.router.navigateByUrl("/")
-          localStorage.setItem("token",res.data.token)
+          localStorage.setItem("userToken",res.data.token)
           this.auth.isLogin=true;
           this.global.userName = res.data.first_name
+          localStorage.setItem("userEmail",res.data.email)
+          localStorage.setItem("userName",res.data.first_name)
+          // localStorage.setItem("userPass",res.data.password)
+          console.log(res.data)
         }
       },(error)=>{
         this.errorMsg = error.error.message
@@ -41,7 +48,7 @@ export class LoginPageComponent {
     }
 
   }
-  
+
 
 
 

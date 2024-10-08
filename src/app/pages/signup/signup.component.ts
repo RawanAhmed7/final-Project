@@ -38,7 +38,8 @@ export class SignupComponent {
           password: '',
           confirm_password: ''
         }
-        localStorage.setItem('token',res.data.token)
+        localStorage.setItem('userToken',res.data.token)
+        localStorage.setItem('userName',res.data.first_name)
         this.global.isLogin=true
         this.router.navigateByUrl("/")
 

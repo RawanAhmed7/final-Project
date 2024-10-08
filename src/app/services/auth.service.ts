@@ -17,14 +17,7 @@ export class AuthService {
   login(obj : any):Observable<any>{
     return this.http.post(`${this.baseUrl}/client/customer_login` , obj )
   }
-  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  // saveUserProfile(user: any): void {
-  //   localStorage.setItem('userProfile',user)
-  // }
-  // getProfileFromLC(): any {
-  //   return JSON.parse(localStorage.getItem('userProfile') || '{}');
-  // }
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
   profile():Observable<any>{
     return this.http.get(`${this.baseUrl}client/profile`)
   }

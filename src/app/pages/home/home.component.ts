@@ -18,21 +18,9 @@ export class HomeComponent {
     })
   }
 
-  ngOnINit(){
-
-
-      // this.global.getIcon().subscribe(res=>{
-      //   console.log(res)
-
-      // })
-    }
 
 
 }
-function getIcon() {
-  throw new Error('Function not implemented.');
 
 
-
-}
 

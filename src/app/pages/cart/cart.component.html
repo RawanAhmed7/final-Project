@@ -5,15 +5,17 @@
       <div class="product-item">
         <span>LCD Monitor</span>
         <span>$650</span>
-        <input type="number" value="1">
+
+        <p>Quantity:</p>
+      <div class="quantity-selector">
+        <button (click)="decreaseQuantity()" class="border border border-0">-</button>
+        <input type="text" [(ngModel)]="quantity">
+        <button (click)="increaseQuantity()" class="border border border-0" >+</button>
+      </div>
+
         <span>$650</span>
       </div>
-      <div class="product-item">
-        <span>PS5 Controller</span>
-        <span>$600</span>
-        <input type="number" value="1">
-        <span>$600</span>
-      </div>
+
     </div>
 
     <!-- <app-product-list></app-product-list> -->

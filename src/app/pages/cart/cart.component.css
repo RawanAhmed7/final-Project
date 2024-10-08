@@ -1,3 +1,7 @@
+*{
+
+  box-sizing: border-box;
+}
 .cart-container {
   width: 60%;
   margin: auto;
@@ -19,7 +23,7 @@
 
 .coupon-section button {
   padding: 10px 20px;
-  background-color:rgb(101, 41, 41);
+  background-color:#d9534f;
   color: white;
   border: none;
   cursor: pointer;
@@ -36,7 +40,7 @@
 
 .cart-total button {
   padding: 10px 20px;
-  background-color:rgb(101, 41, 41);
+  background-color:#d9534f;
   color: white;
   border: none;
   cursor: pointer;
@@ -58,8 +62,24 @@
   padding: 7px 20px;
 }
 .button:hover{
-  background-color: rgb(101, 41, 41);
+  background-color: #d9534f;
   color:white;
-  border-color: rgb(101, 41, 41);
+  border-color:#d9534f
+
+}
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.quantity-selector input {
+  width: 40px;
+  text-align: center;
+}
+.quantity-selector button:hover {
+
+  background-color:#d9534f;
 
 }
