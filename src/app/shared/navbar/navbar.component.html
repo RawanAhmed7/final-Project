@@ -35,20 +35,20 @@
         <!-- <button class="search-icon" type="submit"><i class="fa-solid fa-magnifying-glass position-absolute"></i></button> -->
 
       </form>
-      <div class="d-flex justify-content-between col-1 mt-4 ms-4"  *ngIf="auth.isLogin">
+      <div class="d-flex justify-content-between col-1 mt-4 ms-4 align-content-start"  *ngIf="auth.isLogin">
 
         <div class="dropdown">
           <i class="fa-solid fa-user pb-3"></i>
           <ul class="dropdown-menu">
-            <li><a href="#">Manage my account</a></li>
-            <li><a href="#">my Order</a></li>
+            <li><a>Manage my account</a></li>
+            <li><a routerLink="/cart">my Order</a></li>
             <li><a href="#">Favourites</a></li>
             <li><a href="#"  (click)="handleLogOut()">logOut</a></li>
           </ul>
 
         </div>
         <i class="fa-regular fa-heart nav-item"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-cart-shopping" routerLink="/cart"></i>
       </div>
     </div>
   </div>

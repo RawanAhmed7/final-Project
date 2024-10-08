@@ -28,14 +28,15 @@ const routes: Routes = [
   {path:"signup" , component:SignupComponent},
   {path:"footer" , component:FooterComponent},
   {path:"login-page" , component:LoginPageComponent,canDeactivate:[canDeactivateGuard]},
-  {path:"account" , component:AccountComponent,canActivate:[canActivateGuard]},
+  {path:"account" , component:AccountComponent, canActivate:[canActivateGuard]},
+
   {path:"error" , component:ErrorComponent},
   {path:"cart" , component:CartComponent},
   {path:'', children:[
     {path:'',component:HomeComponent},
     // {path:':id',component:CategoriesComponent}
   ]},
-  {path:'product/:productId',component:CategoriesComponent},
+  {path:'product/:productId',component:CategoriesComponent,},
   {path:'singleProduct/:singleId',component:ProductDetailsComponent},
   { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
 
